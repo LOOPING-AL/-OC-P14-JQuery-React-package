@@ -1,0 +1,23 @@
+.errorMessage {
+  padding-bottom: 5px;
+  margin-top: 5px;
+  height: 30px;
+  color: red;
+  font-size: 12px;
+  width: 250px;
+}
+
+.label {
+  color: white;
+}
+
+.input {
+  width: 250px;
+  height: 20px;
+  font-family: Roboto;
+  padding: 5px;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+}
