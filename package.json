@@ -2,10 +2,7 @@
   "name": "@looping-al/oc-p14-jquery-react-package",
   "version": "1.0.0",
   "description": "Many inputs and table, you can use easily",
-  "source": "src/index.ts",
-  "main": "dist/main.js",
-  "module": "dist/module.js",
-  "types": "dist/index.d.ts",
+  "main": "index.ts",
   "publishConfig": {
     "@LOOPING-AL:registry": "https://npm.pkg.github.com"
   },
