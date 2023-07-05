@@ -1,6 +1,6 @@
 {
   "name": "@looping-al/oc-p14-jquery-react-package",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Many inputs and table, you can use easily",
   "main": "index.ts",
   "publishConfig": {
