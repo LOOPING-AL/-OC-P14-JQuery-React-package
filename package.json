@@ -1,6 +1,6 @@
 {
   "name": "@looping-al/oc-p14-jquery-react-package",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Many inputs and table, you can use easily",
   "main": "index.ts",
   "publishConfig": {
@@ -15,13 +15,14 @@
   },
   "devDependencies": {
     "@types/react": "^18.2.14",
+    "standard-version": "^9.5.0",
     "tslib": "^2.6.0",
     "typescript": "^5.1.6"
   },
   "scripts": {
     "build": "rm -rf dist && npx parcel build",
-    "rollup": "rm -rf dist && rollup -c --bundleConfigAsCjs",
-    "test": "exit 0"
+    "test": "exit 0",
+    "release": "standard-version && git push --follow-tags && npm publish"
   },
   "author": "loooping-al",
   "license": "ISC",
