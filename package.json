@@ -21,7 +21,7 @@
   },
   "scripts": {
     "build": "rm -rf dist && npx parcel build",
-    "test": "exit 0",
+    "test": "exit 1",
     "release": "standard-version && git push --follow-tags && npm publish"
   },
   "author": "loooping-al",
