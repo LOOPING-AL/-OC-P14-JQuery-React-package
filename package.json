@@ -7,7 +7,7 @@
   "module": "dist/module.js",
   "types": "dist/index.d.ts",
   "publishConfig": {
-    "@<em>LOOPING-AL</em>:OC-P14-JQuery-React-package": "https://npm.pkg.github.com"
+    "LOOPING-AL:registry": "https://npm.pkg.github.com"
   },
   "files": [
     "dist"
