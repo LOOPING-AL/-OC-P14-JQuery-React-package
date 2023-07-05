@@ -1,5 +1,5 @@
 {
-  "name": "@looping-al/oc-p14-jquery-react-package",
+  "name": "@loooping-al/inputs-and-table",
   "version": "1.0.0",
   "description": "Many inputs and table, you can use easily",
   "source": "src/index.ts",
@@ -7,7 +7,7 @@
   "module": "dist/module.js",
   "types": "dist/index.d.ts",
   "publishConfig": {
-    "LOOPING-AL:registry": "https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com"
   },
   "files": [
     "dist"
@@ -55,5 +55,13 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LOOPING-AL/OC-P14-JQuery-React-package.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LOOPING-AL/OC-P14-JQuery-React-package/issues"
+  },
+  "homepage": "https://github.com/LOOPING-AL/OC-P14-JQuery-React-package#readme"
 }
