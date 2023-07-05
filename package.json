@@ -7,7 +7,7 @@
   "module": "dist/module.js",
   "types": "dist/index.d.ts",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "@LOOPING-AL:registry": "https://npm.pkg.github.com"
   },
   "files": [
     "dist"
@@ -24,7 +24,7 @@
   "scripts": {
     "build": "rm -rf dist && npx parcel build",
     "rollup": "rm -rf dist && rollup -c --bundleConfigAsCjs",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "exit 0"
   },
   "author": "loooping-al",
   "license": "ISC",
