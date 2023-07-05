@@ -1,7 +1,6 @@
-import { useState } from "react";
-import { idTable, MainTableBodyProps, SortType } from "..";
-import MainTableBodyHeader from "./MainTableBodyHeader";
-import React from "react";
+import { useState } from 'react';
+import { idTable, MainTableBodyProps, SortType, style } from '..';
+import MainTableBodyHeader from './MainTableBodyHeader';
 
 const MainTableBody = ({
   allColumns,
@@ -42,7 +41,7 @@ const MainTableBody = ({
   };
 
   return (
-    <table className="table" style={{ width: "1200px" }}>
+    <table className={style.table} style={{ width: '1200px' }}>
       <thead>
         <tr>
           {allColumns.map(
@@ -63,7 +62,7 @@ const MainTableBody = ({
       <tbody>
         {tableToShow.map((element) => (
           // eslint-disable-next-line @typescript-eslint/dot-notation
-          <tr key={String(element["_id"])}>
+          <tr key={String(element['_id'])}>
             {allColumns.map(
               (column) =>
                 column.keyObject !== idTable && (

@@ -1,7 +1,7 @@
-import React from "react";
-import { MainTableHeaderProps } from "..";
-import ChangePage from "./ChangePage";
-import { SelectInput, TextInput } from "lib";
+import { MainTableHeaderProps, style } from '..';
+import SelectInput from '../../inputs/selectInput/SelectInput';
+import TextInput from '../../inputs/textInput/TextInput';
+import ChangePage from './ChangePage';
 
 const MainTableHeader = ({
   page,
@@ -16,8 +16,8 @@ const MainTableHeader = ({
   handleChangeSearch,
   handleChangeElementToShow,
 }: MainTableHeaderProps) => (
-  <div className="tableHeader">
-    <div className="tableHeaderPart tableHeaderLittlePart">
+  <div className={style.tableHeader}>
+    <div className={`${style.tableHeaderPart} ${style.tableHeaderLittlePart}`}>
       <p>Show</p>
       <SelectInput
         id="elementShow"
@@ -29,7 +29,7 @@ const MainTableHeader = ({
       <p>entries</p>
     </div>
 
-    <div className="tableHeaderPart">
+    <div className={style.tableHeaderPart}>
       {tableUpdateLength === 0 ? (
         <p>No items</p>
       ) : (
@@ -67,7 +67,7 @@ const MainTableHeader = ({
     />
 
     {haveASearchInput && (
-      <div className="tableHeaderPart">
+      <div className={style.tableHeaderPart}>
         <p>Search</p>
         <TextInput
           id="search"

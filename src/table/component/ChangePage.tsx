@@ -1,6 +1,5 @@
-import React from "react";
-import { ChangePageProps, Direction } from "..";
-import { SelectInput } from "inputs";
+import { ChangePageProps, Direction, style } from '..';
+import SelectInput from '../../inputs/selectInput/SelectInput';
 
 const ChangePage = ({
   page,
@@ -9,14 +8,14 @@ const ChangePage = ({
   handleClickPage,
   handleSelectPage,
 }: ChangePageProps) => (
-  <div className="tableHeaderPart tableHeaderLittlePart}">
+  <div className={`${style.tableHeaderPart} ${style.tableHeaderLittlePart}`}>
     <button
       type="button"
-      className="tableButton"
+      className={style.tableButton}
       onClick={() => handleClickPage(Direction.Left)}
       disabled={page === 1 || tableUpdateLength === 0}
     >
-      <span className="tableButtonText">Previous</span>
+      <span className={style.tableButtonText}>Previous</span>
     </button>
 
     <SelectInput
@@ -32,14 +31,14 @@ const ChangePage = ({
 
     <button
       type="button"
-      className="tableButton"
+      className={style.tableButton}
       onClick={() => handleClickPage(Direction.Right)}
       disabled={
         page === Math.ceil(tableUpdateLength / numberOfElementToShow) ||
         tableUpdateLength === 0
       }
     >
-      <span className="tableButtonText">Next</span>
+      <span className={style.tableButtonText}>Next</span>
     </button>
   </div>
 );

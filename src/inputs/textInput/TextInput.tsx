@@ -1,5 +1,4 @@
-import React from 'react';
-import './TextInput.css';
+import style from './TextInput.module.css';
 
 const defaultProps = {
   label: undefined,
@@ -26,12 +25,12 @@ const InputText = ({
 }) => (
   <div>
     {label && (
-      <label className="label" htmlFor={id}>
+      <label className={style.label} htmlFor={id}>
         {label}
       </label>
     )}
     <input
-      className="input"
+      className={style.input}
       type="text"
       id={id}
       value={value}
@@ -39,7 +38,7 @@ const InputText = ({
       onChange={(e) => handleChange && handleChange(e.target.value)}
     />
     {typeof errorMessage === 'string' && (
-      <p className="errorMessage">{errorMessage}</p>
+      <p className={style.errorMessage}>{errorMessage}</p>
     )}
   </div>
 );

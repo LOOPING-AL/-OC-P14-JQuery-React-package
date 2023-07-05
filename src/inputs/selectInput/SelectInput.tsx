@@ -1,11 +1,10 @@
-import React from "react";
-import "./SelectInput.css";
+import style from './SelectInput.module.css';
 
 const defaultProps = {
   required: false,
   label: undefined,
-  width: "250px",
-  value: "",
+  width: '250px',
+  value: '',
   handleChange: () => undefined,
 };
 
@@ -26,8 +25,8 @@ const SelectInput = ({
   value?: string;
   handleChange?: (value: string) => void;
 }) => (
-  <div className="selectInput">
-    <label className="label" htmlFor={id}>
+  <div className={style.selectInput}>
+    <label className={style.label} htmlFor={id}>
       {label}
     </label>
     <select

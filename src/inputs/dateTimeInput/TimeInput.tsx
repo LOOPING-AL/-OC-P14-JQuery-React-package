@@ -1,8 +1,7 @@
-import React from "react";
-import defaultProps from "./defaultProps";
-import InputType from "./enums";
-import "./MainDateTimeInput.css";
-import { TimeInputProps } from "./types";
+import defaultProps from './defaultProps';
+import InputType from './enums';
+import style from './MainDateTimeInput.module.css';
+import { TimeInputProps } from './types';
 
 const TimeInput = ({
   id,
@@ -13,7 +12,7 @@ const TimeInput = ({
   handleChangeTime,
 }: TimeInputProps) => (
   <input
-    className="inputDateOrTime"
+    className={style.inputDateOrTime}
     type={InputType.TIME}
     id={id}
     min={minTime}

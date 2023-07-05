@@ -1,9 +1,8 @@
-import React from "react";
-import DateInput from "./DateInput";
-import DateTimeInput from "./DateTimeInput";
-import defaultProps from "./defaultProps";
-import TimeInput from "./TimeInput";
-import { DateTimeInputProps } from "./types";
+import DateInput from './DateInput';
+import DateTimeInput from './DateTimeInput';
+import defaultProps from './defaultProps';
+import TimeInput from './TimeInput';
+import { DateTimeInputProps } from './types';
 
 const ChooseDateTimeInput = ({
   id,
@@ -18,7 +17,7 @@ const ChooseDateTimeInput = ({
   handleChangeDate,
   handleChangeTime,
 }: DateTimeInputProps) => {
-  if (type === "time") {
+  if (type === 'time') {
     return (
       <TimeInput
         id={id}
@@ -30,7 +29,7 @@ const ChooseDateTimeInput = ({
       />
     );
   }
-  if (type === "date") {
+  if (type === 'date') {
     return (
       <DateInput
         id={id}

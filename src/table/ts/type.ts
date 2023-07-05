@@ -10,7 +10,7 @@ export interface MainTableProps {
     numberOfElementToShow: number;
     search: string;
     sort: Sort;
-  }) => Promise<any>;
+  }) => any;
 }
 
 export type ColumnNameAndOrderToShowTypeArray = ColumnNameAndOrderToShowType[];

@@ -1,7 +1,6 @@
-import React from 'react';
 import defaultProps from './defaultProps';
 import InputType from './enums';
-import './MainDateTimeInput.css';
+import style from './MainDateTimeInput.module.css';
 import { DateTimeInputProps } from './types';
 
 const DateTimeInput = ({
@@ -16,9 +15,9 @@ const DateTimeInput = ({
   handleChangeDate,
   handleChangeTime,
 }: DateTimeInputProps) => (
-  <div className="inputDateAndTime">
+  <div className={style.inputDateAndTime}>
     <input
-      className="inputDateOrTime"
+      className={style.inputDateOrTime}
       type={InputType.DATE}
       id={id}
       min={minDate}
@@ -29,7 +28,7 @@ const DateTimeInput = ({
       onChange={(e) => handleChangeDate && handleChangeDate(e.target.value)}
     />
     <input
-      className="inputDateOrTime"
+      className={style.inputDateOrTime}
       type={InputType.TIME}
       id={id}
       min={minTime}

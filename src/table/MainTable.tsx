@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 import {
   ColumnNameAndOrderToShowTypeArray,
   Direction,
@@ -7,9 +7,11 @@ import {
   SortType,
   defaultProps,
   getColumns,
-} from ".";
-import { MainTableBody, MainTableHeader } from "./component";
-import React from "react";
+  style,
+} from '.';
+import { MainTableBody, MainTableHeader } from './component';
+import Modal from '../modal/Modal';
+import { ModalMessage } from '../../ts';
 
 const Table = ({
   haveASearchInput,
@@ -31,11 +33,12 @@ const Table = ({
   const [numberOfElementToShow, setNumberOfElementToShow] = useState(
     defaultNumberToshow || defaultProps.defaultNumberToshow
   );
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState('');
   const [sort, setSort] = useState<Sort>({
     column: allColumns[1].keyObject,
     sortType: SortType.Up,
   });
+  const [modalOpen, setModalOpen] = useState(false);
 
   const handleChangeElementToShow = (value: string) => {
     setNumberOfElementToShow(Number(value));
@@ -60,7 +63,12 @@ const Table = ({
   };
 
   useEffect(() => {
-    onChange({ page, numberOfElementToShow, search, sort }).then((res) => {
+    onChange({ page, numberOfElementToShow, search, sort }).then((res: any) => {
+      if (res === undefined) {
+        setModalOpen(true);
+        return;
+      }
+
       setTableToShow(res.body.tableToShow);
       setTableUpdateLength(res.body.tableUpdateLength);
       setTableTotalLength(res.body.tableTotalLength);
@@ -78,7 +86,7 @@ const Table = ({
   ]);
 
   return (
-    <div className="mainTable">
+    <div className={style.mainTable}>
       <MainTableHeader
         page={page}
         search={search}
@@ -96,6 +104,11 @@ const Table = ({
         allColumns={allColumns}
         tableToShow={tableToShow}
         sort={(sortValue) => sortT(sortValue)}
+      />
+      <Modal
+        title={ModalMessage.Troubles}
+        open={modalOpen}
+        handleClose={() => setModalOpen(false)}
       />
     </div>
   );

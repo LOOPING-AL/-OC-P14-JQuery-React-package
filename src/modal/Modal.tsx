@@ -1,6 +1,5 @@
-import { useEffect, useState } from "react";
-import "./Modal.css";
-import React from "react";
+import { useEffect, useState } from 'react';
+import style from './Modal.module.css';
 
 const defaultProps = { information: undefined };
 
@@ -23,7 +22,7 @@ const Modal = ({
   const handleClickClose = () => closeModal();
 
   const handleClickOutside = (e: any) =>
-    e.target.id === "modal" && closeModal();
+    e.target.id === 'modal' && closeModal();
 
   useEffect(() => {
     setOpenModal(open);
@@ -32,18 +31,22 @@ const Modal = ({
   return (
     <div
       id="modal"
-      className={`modal ${openModal && "modalOpen"}`}
+      className={`${style.modal} ${openModal && style.modalOpen}`}
       onClick={handleClickOutside}
       onKeyDown={handleClickOutside}
       role="button"
       tabIndex={0}
     >
-      <dialog className="modalContent" open={openModal}>
-        <button type="button" className="close" onClick={handleClickClose}>
+      <dialog className={style.modalContent} open={openModal}>
+        <button
+          type="button"
+          className={style.close}
+          onClick={handleClickClose}
+        >
           &times;
         </button>
-        <div className="text">
-          <h2 className="title">{title}</h2>
+        <div className={style.text}>
+          <h2 className={style.title}>{title}</h2>
           {information && <p>{information}</p>}
         </div>
       </dialog>

@@ -1,6 +1,4 @@
-import React from "react";
-import { MainTableBodyHeaderProps, SortType } from "..";
-import "../assets/style/Table.css";
+import { caretUp, MainTableBodyHeaderProps, SortType, style } from '..';
 
 const MainTableBodyHeader = ({
   allColumns,
@@ -12,13 +10,15 @@ const MainTableBodyHeader = ({
     style={{ width: `${100 / allColumns.length}%` }}
     onClick={() => handleClick(column.keyObject)}
   >
-    <div className="columnHeader">
+    <div className={style.columnHeader}>
       <p>{column.columnName}</p>
       {sortType !== SortType.None && (
         <img
-          src="../assets/icons/caret-up-solid.svg"
+          src={caretUp}
           alt="caret up"
-          className={`caret ${sortType === SortType.Down && "caretDown"}`}
+          className={`${style.caret} ${
+            sortType === SortType.Down && style.caretDown
+          }`}
         />
       )}
     </div>

@@ -1,7 +1,6 @@
-import React from 'react';
 import ChooseDateTimeInput from './ChooseDateTimeInput';
 import defaultProps from './defaultProps';
-import './MainDateTimeInput.css';
+import style from './MainDateTimeInput.module.css';
 import { DateTimeInputProps, MainDateTimeInputProps } from './types';
 
 const MainDateTimeInput = ({
@@ -20,7 +19,7 @@ const MainDateTimeInput = ({
   handleChangeTime,
 }: DateTimeInputProps & MainDateTimeInputProps) => (
   <div>
-    <label className="label" htmlFor={id}>
+    <label className={style.label} htmlFor={id}>
       {label}
     </label>
     <ChooseDateTimeInput
@@ -36,7 +35,7 @@ const MainDateTimeInput = ({
       handleChangeDate={handleChangeDate}
       handleChangeTime={handleChangeTime}
     />
-    <p className="errorMessage">{errorMessage}</p>
+    <p className={style.errorMessage}>{errorMessage}</p>
   </div>
 );
 

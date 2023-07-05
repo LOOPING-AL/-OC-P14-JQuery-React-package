@@ -1,5 +1,5 @@
 {
-  "name": "@loooping-al/inputs-and-table",
+  "name": "inputs-and-table",
   "version": "1.0.0",
   "description": "Many inputs and table, you can use easily",
   "source": "src/index.ts",
@@ -54,12 +54,9 @@
     "rollup": "rm -rf dist && rollup -c --bundleConfigAsCjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "loooping-al",
   "license": "ISC",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/LOOPING-AL/OC-P14-JQuery-React-package.git"
-  },
+  "repository": "git://https://github.com/LOOPING-AL/OC-P14-JQuery-React-package.git",
   "bugs": {
     "url": "https://github.com/LOOPING-AL/OC-P14-JQuery-React-package/issues"
   },
