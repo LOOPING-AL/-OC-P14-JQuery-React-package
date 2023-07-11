@@ -1,12 +1,24 @@
-import style from './SelectInput.module.css';
+import style from "./SelectInput.module.css";
 
 const defaultProps = {
   required: false,
   label: undefined,
-  width: '250px',
-  value: '',
+  width: "250px",
+  value: "",
   handleChange: () => undefined,
 };
+
+/**
+ * Show button
+ * @param {string} id
+ * @param {string} label
+ * @param {boolean} required
+ * @param {string[]} options
+ * @param {string} width
+ * @param {string} value
+ * @param {(value: string) => void} handleChange
+ * @returns {JSX.Element} JSX.Element
+ */
 
 const SelectInput = ({
   id,

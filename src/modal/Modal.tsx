@@ -1,7 +1,16 @@
-import { useEffect, useState } from 'react';
-import style from './Modal.module.css';
+import { useEffect, useState } from "react";
+import style from "./Modal.module.css";
 
 const defaultProps = { information: undefined };
+
+/**
+ * Show button
+ * @param {boolean} open
+ * @param {string} title
+ * @param {string} information
+ * @param {() => void} handleClose
+ * @returns {JSX.Element} JSX.Element
+ */
 
 const Modal = ({
   open,
@@ -22,7 +31,7 @@ const Modal = ({
   const handleClickClose = () => closeModal();
 
   const handleClickOutside = (e: any) =>
-    e.target.id === 'modal' && closeModal();
+    e.target.id === "modal" && closeModal();
 
   useEffect(() => {
     setOpenModal(open);

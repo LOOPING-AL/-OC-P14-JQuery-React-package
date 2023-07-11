@@ -1,7 +1,25 @@
-import ChooseDateTimeInput from './ChooseDateTimeInput';
-import defaultProps from './defaultProps';
-import style from './MainDateTimeInput.module.css';
-import { DateTimeInputProps, MainDateTimeInputProps } from './types';
+import ChooseDateTimeInput from "./ChooseDateTimeInput";
+import defaultProps from "./defaultProps";
+import style from "./MainDateTimeInput.module.css";
+import { DateTimeInputProps, MainDateTimeInputProps } from "./types";
+
+/**
+ * Show button
+ * @param {string} id
+ * @param {string} label
+ * @param {string} errorMessage
+ * @param {boolean} required
+ * @param {string} type
+ * @param {string} maxDate
+ * @param {string} minDate
+ * @param {string} maxTime
+ * @param {string} minTime
+ * @param {string} valueDate
+ * @param {string} valuetime
+ * @param {(value: string) => void} handleChangeDate
+ * @param {(value: string) => void} handleChangeTime
+ * @returns {JSX.Element} JSX.Element
+ */
 
 const MainDateTimeInput = ({
   id,

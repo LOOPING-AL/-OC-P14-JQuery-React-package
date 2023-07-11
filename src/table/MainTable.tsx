@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 import {
   ColumnNameAndOrderToShowTypeArray,
   Direction,
@@ -8,10 +8,19 @@ import {
   defaultProps,
   getColumns,
   style,
-} from '.';
-import { MainTableBody, MainTableHeader } from './component';
-import Modal from '../modal/Modal';
-import { ModalMessage } from '../../ts';
+} from ".";
+import { MainTableBody, MainTableHeader } from "./component";
+import Modal from "../modal/Modal";
+import { ModalMessage } from "../../ts";
+
+/**
+ * Show button
+ * @param {boolean} haveASearchInput
+ * @param {string[]} entries
+ * @param {number} defaultNumberToShow
+ * @param {(params: {page: number, numberOfElementToShow: number, search: string, sort: Sort, }) => Promise<any>;} onChange
+ * @returns {JSX.Element} JSX.Element
+ */
 
 const Table = ({
   haveASearchInput,
@@ -33,7 +42,7 @@ const Table = ({
   const [numberOfElementToShow, setNumberOfElementToShow] = useState(
     defaultNumberToshow || defaultProps.defaultNumberToshow
   );
-  const [search, setSearch] = useState('');
+  const [search, setSearch] = useState("");
   const [sort, setSort] = useState<Sort>({
     column: allColumns[1].keyObject,
     sortType: SortType.Up,

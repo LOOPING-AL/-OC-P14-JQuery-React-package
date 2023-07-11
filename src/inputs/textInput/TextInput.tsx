@@ -1,12 +1,23 @@
-import style from './TextInput.module.css';
+import style from "./TextInput.module.css";
 
 const defaultProps = {
   label: undefined,
   errorMessage: undefined,
-  value: '',
-  placeholder: '',
+  value: "",
+  placeholder: "",
   handleChange: () => undefined,
 };
+
+/**
+ * Show button
+ * @param {string} id
+ * @param {string} label
+ * @param {boolean} required
+ * @param {string} errrorMessage
+ * @param {string} placeholder
+ * @param {(value: string) => void} handleChange
+ * @returns {JSX.Element} JSX.Element
+ */
 
 const InputText = ({
   id,
@@ -37,7 +48,7 @@ const InputText = ({
       placeholder={placeholder}
       onChange={(e) => handleChange && handleChange(e.target.value)}
     />
-    {typeof errorMessage === 'string' && (
+    {typeof errorMessage === "string" && (
       <p className={style.errorMessage}>{errorMessage}</p>
     )}
   </div>
